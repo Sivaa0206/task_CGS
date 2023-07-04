@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "firstName": "siva",
+      "lastName": "Thangaraj",
+      "dob": "2023-07-27T18:30:00.000Z",
+      "email": "sivasanjay373@gmail.com",
+      "mobileNumber": "9983838383",
+      "idProof": "panCard",
+      "idNumber": "09383208320832",
+      "address": "4/44-1",
+      "address2": "keelakalangal",
+      "address3": "tenkasi",
+      "landMark": "Tenkasi",
+      "city": "tirunelveli",
+      "state": "Tamilnaddu",
+      "nominee": "1",
+      "id": 2
+    }
+  ],
+  "profile": {
+    "firstName": "siva",
+    "lastName": "thangaraj",
+    "dob": "2023-07-06T18:30:00.000Z",
+    "email": "siva@123.com",
+    "mobileNumber": "893839393",
+    "idProof": "voterId",
+    "idNumber": "03938392",
+    "address": "4/44",
+    "address2": "north street",
+    "address3": "surandai",
+    "landMark": "tenkasi",
+    "city": "tirunelveli",
+    "state": "tamilnadu"
+  }
+}
