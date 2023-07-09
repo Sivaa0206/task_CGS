@@ -11,11 +11,23 @@ import { gte } from '../gte.validators';
 })
 export class RegisterComponent {
   selectedDate!: Date;
-  // age!: number;
   birthDate: any;
-  dob: any;
+// firstName: any;
+// lastName: any;
+// dob: any;
+// email: any;
+// mobileNumber: any;
+// idProof: any;
+// idNumber: any;
+// address: any;
+// address2: any;
+// address3: any;
+// landMark: any;
+// city: any;
+// state: any;
+datas: any;
+
   
-  // birthDate!: Date;
 
   constructor( private formBuilder:FormBuilder ,private http:HttpClient, private router:Router){}
 
@@ -38,6 +50,34 @@ export class RegisterComponent {
   get dob1(){
     return this.registerForm.get('dob');
   }
+
+  saveDatas(){
+    console.log(this.registerForm.value);
+    
+      this.http.post("http://localhost:3000/datas", this.registerForm.value).subscribe(response =>
+      {
+        this.datas = response
+        console.log(this.datas);
+        
+        console.log("data saved Successfully");
+        this.router.navigate(['/yes']);
+        
+      },error => {
+        console.error("error saving data", error);
+        
+      });
+    } 
+    }
+  
+  
+  // registerFormDatas(){
+  //   this.http.post("http://localhost:3000/regsiterDatas", this.registerForm.value).subscribe()
+  //   console.log(this.registerForm.value);
+  //   this.router.navigate(['/yes']);
+  //   this.registerForm.reset();
+    
+  // }
+
   // regDatas(){
   //   this.http.post("http://localhost:3000/posts",this.registerForm.value).subscribe()
   //   console.log(this.registerForm.value);
@@ -71,4 +111,4 @@ export class RegisterComponent {
   //   } else{
   //     this.router.navigate(['/home']);
   //   }
-}
+

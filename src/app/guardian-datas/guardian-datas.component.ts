@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GuardianDatasComponent implements OnInit {
 
-  displayedColumns : string[] = ['firstName','lastName','dob','email','mobileNumber','idProof','idNumber','address','address2','address3','landMark','city','state']
   
   guardianDatas:any;
   constructor(private http:HttpClient){}

@@ -5,6 +5,10 @@ import { NomineeYesComponent } from './nominee-yes/nominee-yes.component';
 import { GuardianComponent } from './guardian/guardian.component';
 import { NomineeDatasComponent } from './nominee-datas/nominee-datas.component';
 import { GuardianDatasComponent } from './guardian-datas/guardian-datas.component';
+import { RegisterTableComponent } from './register-table/register-table.component';
+import { EditRegisterComponent } from './edit-register/edit-register.component';
+import { GuardianeditComponent } from './guardianedit/guardianedit.component';
+import { NomineeEditComponent } from './nominee-edit/nominee-edit.component';
 
 const routes: Routes = [
   {path:"home",component:RegisterComponent},
@@ -12,7 +16,11 @@ const routes: Routes = [
   {path:"guardian",component:GuardianComponent},
   {path:"nomineeData",component:NomineeDatasComponent},
   {path:"guardianData",component:GuardianDatasComponent},
-  {path:"",redirectTo:"home",pathMatch:'full'}
+  {path:"table", component:RegisterTableComponent},
+  {path:"edit/:id",component:EditRegisterComponent},
+  {path:"editGuardian/:id", component:GuardianeditComponent},
+  {path:"editNominee/:id", component:NomineeEditComponent},
+  {path:"",redirectTo:"table",pathMatch:'full'}
 ];
 
 @NgModule({

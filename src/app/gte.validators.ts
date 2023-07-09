@@ -5,7 +5,7 @@ export function gte(minAge: number): ValidatorFn {
     const age = new Date().getFullYear() - new Date(control.value).getFullYear();
 
     if (isNaN(age) || age < minAge) {
-      return { gte: true };
+      return { gte: true, isButton: true };
     }
 
     return null;

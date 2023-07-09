@@ -1,68 +1,40 @@
-<div class="mat-elevation-z8">
-    <table mat-table [dataSource]="guardianDatas">
-    
-      <ng-container matColumnDef="firstName">
-        <th mat-header-cell *matHeaderCellDef> FirstName </th>
-        <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
-       
-      </ng-container>
-    
-      <ng-container matColumnDef="lastName">
-        <th mat-header-cell *matHeaderCellDef> Last Name </th>
-        <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
-      </ng-container>
-    
-      <ng-container matColumnDef="dob">
-        <th mat-header-cell *matHeaderCellDef> DOB </th>
-        <td mat-cell *matCellDef="let element"> {{element.dob}} </td>
-      </ng-container>
-    
-      <ng-container matColumnDef="email">
-        <th mat-header-cell *matHeaderCellDef> Email</th>
-        <td mat-cell *matCellDef="let element" > {{element.email}} </td>
-      </ng-container>
-      <ng-container matColumnDef="mobileNumber">
-        <th mat-header-cell *matHeaderCellDef> Mobile Number </th>
-        <td mat-cell *matCellDef="let element">{{element.mobileNumber}}</td>
-    
-      </ng-container>
-      <ng-container matColumnDef="idProof">
-        <th mat-header-cell *matHeaderCellDef>ID Proof</th>
-        <td mat-cell *matCellDef="let element">{{element.idProof}}</td> 
-      </ng-container>
-      <ng-container matColumnDef="idNumber">
-        <th mat-header-cell *matHeaderCellDef>ID Number</th>
-        <td mat-cell *matCellDef="let element">{{element.idNumber}}</td> 
-      </ng-container>
-      <ng-container matColumnDef="address">
-        <th mat-header-cell *matHeaderCellDef>Address 1</th>
-        <td mat-cell *matCellDef="let element">{{element.address}}</td> 
-      </ng-container>
-      <ng-container matColumnDef="address2">
-        <th mat-header-cell *matHeaderCellDef>Address 2</th>
-        <td mat-cell *matCellDef="let element">{{element.address2}}</td> 
-      </ng-container>
-      <ng-container matColumnDef="address3">
-        <th mat-header-cell *matHeaderCellDef>Address 3</th>
-        <td mat-cell *matCellDef="let element">{{element.address3}}</td> 
-      </ng-container>
-      <ng-container matColumnDef="landMark">
-        <th mat-header-cell *matHeaderCellDef>Landmark</th>
-        <td mat-cell *matCellDef="let element">{{element.landMark}}</td> 
-      </ng-container>
-      <ng-container matColumnDef="city">
-        <th mat-header-cell *matHeaderCellDef>City</th>
-        <td mat-cell *matCellDef="let element">{{element.city}}</td> 
-      </ng-container>
-      <ng-container matColumnDef="state">
-        <th mat-header-cell *matHeaderCellDef>State</th>
-        <td mat-cell *matCellDef="let element">{{element.state}}</td> 
-      </ng-container>
-      
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let element; columns: displayedColumns;"></tr>
-      
-    </table>
-    </div>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">FirstName</th>
+      <th scope="col">LastName</th>
+      <th scope="col">DOB</th>
+      <th scope="col">E-Mail</th>
+      <th scope="col">MobileNumber</th>
+      <th scope="col">ID Proof</th>
+      <th scope="col">ID Number</th>
+      <th scope="col">Address 1</th>
+      <th scope="col">Address 2</th>
+      <th scope="col">Address 3</th>
+      <th scope="col">LandMark</th>
+      <th scope="col">City</th>
+      <th scope="col">State</th>
+      <th scope="col">EDIT</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of guardianDatas">
+      <td>{{item.firstName}}</td>
+      <td>{{item.lastName}}</td>
+      <td>{{item.dob | date}}</td>
+      <td>{{item.email}}</td>
+      <td>{{item.mobileNumber}}</td>
+      <td>{{item.idProof}}</td>
+      <td>{{item.idNumber}}</td>
+      <td>{{item.address}}</td>
+      <td>{{item.address2}}</td>
+      <td>{{item.address3}}</td>
+      <td>{{item.landMark}}</td>
+      <td>{{item.city}}</td>
+      <td>{{item.state}}</td>
+      <td><button class="btn btn-danger" routerLink="/editGuardian/{{item.id}}" type="button">Edit</button></td>
+    </tr>
     
     
+  
+</table>

@@ -1,0 +1,60 @@
+<form class="card">
+    <div>
+    <h4>Edit Registration Form</h4>
+    </div>
+    <div class="col-3">
+      <label for="exampleInputEmail1" class="form-label">FirstName</label>
+      <input type="email" class="form-control" name="firstName" [(ngModel)]="nominee.firstName">
+    </div>
+    <div class="col-3">
+        <label for="exampleInputEmail1" class="form-label">LastName</label>
+        <input type="email" class="form-control" name="lastName" [(ngModel)]="nominee.lastName">
+      </div>
+      <div class="col-3">
+        <label for="exampleInputEmail1" class="form-label">DOB</label>
+        <input type="email" class="form-control" name="lastName" [(ngModel)]="nominee.dob">
+      </div>
+      <div class="col-3">
+        <label for="exampleInputEmail1" class="form-label">Email</label>
+        <input type="email" class="form-control" name="email" [(ngModel)]="nominee.email"  >
+      </div>
+      <div class="col-3">
+        <label for="exampleInputEmail1" class="form-label">MobileNumber</label>
+        <input type="email" class="form-control" name="mobileNumber" [(ngModel)]="nominee.mobileNumber"  >
+      </div>
+      <div class="col-3">
+        <label for="exampleInputEmail1" class="form-label">ID Proof</label>
+        <input type="email" class="form-control" name="idProof" [(ngModel)]="nominee.idProof"  >
+      </div>
+      <div class="col-3">
+        <label for="exampleInputEmail1" class="form-label">ID Number</label>
+        <input type="email" class="form-control" name="idNumber" [(ngModel)]="nominee.idNumber">
+      </div>
+      <div class="col-3">
+        <label for="exampleInputEmail1" class="form-label">Address 1</label>
+        <input type="email" class="form-control" name="address" [(ngModel)]="nominee.address">
+      </div>
+      <div class="col-3">
+        <label for="exampleInputEmail1" class="form-label">Address 2</label>
+        <input type="email" class="form-control" name="address1" [(ngModel)]="nominee.address1">
+      </div>
+      <div class="col-3">
+        <label for="exampleInputEmail1" class="form-label">Address 3</label>
+        <input type="email" class="form-control" name="address2" [(ngModel)]="nominee.address2">
+      </div>
+      <div class="col-3">
+        <label for="exampleInputEmail1" class="form-label">LandMark</label>
+        <input type="email" class="form-control" name="landMark" [(ngModel)]="nominee.landMark">
+      </div>
+      <div class="col-3">
+        <label for="exampleInputEmail1" class="form-label">City</label>
+        <input type="email" class="form-control" name="city" [(ngModel)]="nominee.city">
+      </div>
+      <div class="col-3">
+        <label for="exampleInputEmail1" class="form-label">State</label>
+        <input type="email" class="form-control" name="state" [(ngModel)]="nominee.state">
+      </div>
+      <div class="float-end">
+    <button type="button" (click)="updatedNominee()" class="btn btn-primary">Submit</button>
+</div>
+  </form>

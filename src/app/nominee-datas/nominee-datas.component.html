@@ -1,3 +1,7 @@
+<div class="mat-card-container">
+
+<mat-card>
+  <mat-card-content>
 <div class="mat-elevation-z8">
     <table mat-table [dataSource]="datas">
     
@@ -14,7 +18,7 @@
     
       <ng-container matColumnDef="dob">
         <th mat-header-cell *matHeaderCellDef> DOB </th>
-        <td mat-cell *matCellDef="let element"> {{element.dob}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.dob | date}} </td>
       </ng-container>
     
       <ng-container matColumnDef="email">
@@ -40,11 +44,11 @@
       </ng-container>
       <ng-container matColumnDef="address2">
         <th mat-header-cell *matHeaderCellDef>Address 2</th>
-        <td mat-cell *matCellDef="let element">{{element.address2}}</td> 
+        <td mat-cell *matCellDef="let element">{{element.address1}}</td> 
       </ng-container>
       <ng-container matColumnDef="address3">
         <th mat-header-cell *matHeaderCellDef>Address 3</th>
-        <td mat-cell *matCellDef="let element">{{element.address3}}</td> 
+        <td mat-cell *matCellDef="let element">{{element.address2}}</td> 
       </ng-container>
       <ng-container matColumnDef="landMark">
         <th mat-header-cell *matHeaderCellDef>Landmark</th>
@@ -58,11 +62,16 @@
         <th mat-header-cell *matHeaderCellDef>State</th>
         <td mat-cell *matCellDef="let element">{{element.state}}</td> 
       </ng-container>
+      <ng-container matColumnDef="edit">
+        <th mat-header-cell *matHeaderCellDef>EDIT</th>
+        <td mat-cell *matCellDef="let element" ><button class="btn btn-danger" routerLink="/editNominee/{{element.id}}" type="button">Edit</button></td>
+      </ng-container>
       
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let element; columns: displayedColumns;"></tr>
       
     </table>
     </div>
-    
-    
+  </mat-card-content>
+  </mat-card>
+  </div>

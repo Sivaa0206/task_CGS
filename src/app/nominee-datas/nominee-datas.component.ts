@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class NomineeDatasComponent implements OnInit {
 
-  displayedColumns : string[] = ['firstName','lastName','dob','email','mobileNumber','idProof','idNumber','address','address2','address3','landMark','city','state']
+  displayedColumns : string[] = ['firstName','lastName','dob','email','mobileNumber','idProof','idNumber','address','address2','address3','landMark','city','state','edit']
   datas: any;
 
   constructor(private http:HttpClient,private router:Router){}

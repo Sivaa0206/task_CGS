@@ -37,7 +37,7 @@ export class GuardianComponent {
     this.guardianRegisterForm.reset();
 
   }
-  get dob2(){
+  get dob(){
     return this.guardianRegisterForm.get('dob');
   }
 }

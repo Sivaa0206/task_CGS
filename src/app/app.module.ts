@@ -23,6 +23,11 @@ import { NomineeYesComponent } from './nominee-yes/nominee-yes.component';
 import { GuardianComponent } from './guardian/guardian.component';
 import { NomineeDatasComponent } from './nominee-datas/nominee-datas.component';
 import { GuardianDatasComponent } from './guardian-datas/guardian-datas.component';
+import { RegisterTableComponent } from './register-table/register-table.component';
+import { EditRegisterComponent } from './edit-register/edit-register.component';
+import { GuardianeditComponent } from './guardianedit/guardianedit.component';
+import { NomineeEditComponent } from './nominee-edit/nominee-edit.component';
+import { AdminComponent } from './admin/admin.component';
 // import { DatasModule } from './datas/datas.module';
 
 
@@ -41,6 +46,11 @@ import { GuardianDatasComponent } from './guardian-datas/guardian-datas.componen
     GuardianComponent,
     NomineeDatasComponent,
     GuardianDatasComponent,
+    RegisterTableComponent,
+    EditRegisterComponent,
+    GuardianeditComponent,
+    NomineeEditComponent,
+    AdminComponent,
     
   ],
   imports: [

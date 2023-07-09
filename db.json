@@ -16,21 +16,103 @@
       "state": "Tamilnaddu",
       "nominee": "1",
       "id": 2
+    },
+    {
+      "firstName": "Ravi",
+      "lastName": "Selvam",
+      "email": "ravi@123.com",
+      "mobileNumber": "8989382392",
+      "idProof": "passport",
+      "idNumber": "32794272347",
+      "address": "4/44-1",
+      "address1": "west strreet",
+      "address2": "Kamarajar Nagar",
+      "landMark": "Tenkasi",
+      "city": "Tirunelveli",
+      "state": "Tamil Nadu",
+      "id": 3
+    },
+    {
+      "firstName": "Sanjay",
+      "lastName": "Thangaraj",
+      "email": "siva@123.com",
+      "mobileNumber": "8344636004",
+      "idProof": "drivingLicense",
+      "idNumber": "93298328923",
+      "address": "4/44-1",
+      "address1": "Kamarajar Nagar",
+      "address2": "Keelakalangal",
+      "landMark": "Tenkasi",
+      "city": "Tirunelveli",
+      "state": "Tamil Nadu",
+      "id": 4
+    },
+    {
+      "firstName": "siva",
+      "lastName": "T",
+      "dob": "2002-02-04T18:30:00.000Z",
+      "email": "siva@132.com",
+      "mobileNumber": "253423223",
+      "idProof": "passport",
+      "idNumber": "3234423223",
+      "address": "4433",
+      "address1": "west street",
+      "address2": "Keelakalangal",
+      "landMark": "Tenkasi",
+      "city": "Tirunelveli",
+      "state": "Tamil Nadu",
+      "id": 5
     }
   ],
-  "profile": {
-    "firstName": "siva",
-    "lastName": "thangaraj",
-    "dob": "2023-07-06T18:30:00.000Z",
-    "email": "siva@123.com",
-    "mobileNumber": "893839393",
-    "idProof": "voterId",
-    "idNumber": "03938392",
-    "address": "4/44",
-    "address2": "north street",
-    "address3": "surandai",
-    "landMark": "tenkasi",
-    "city": "tirunelveli",
-    "state": "tamilnadu"
-  }
+  "profile": [
+    {
+      "firstName": "siva",
+      "lastName": "thangaraj",
+      "dob": "2023-07-06T18:30:00.000Z",
+      "email": "siva@123.com",
+      "mobileNumber": "893839393",
+      "idProof": "voterId",
+      "idNumber": "03938392",
+      "address": "4/44",
+      "address2": "north street",
+      "address3": "surandai",
+      "landMark": "tenkasi",
+      "city": "tirunelveli",
+      "state": "tamilnadu"
+    }
+  ],
+  "datas": [
+    {
+      "firstName": "siva",
+      "lastName": "Thangaraj",
+      "dob": "2023-07-27T18:30:00.000Z",
+      "email": "sivasanjay373@gmail.com",
+      "mobileNumber": "9983838383",
+      "idProof": "panCard",
+      "idNumber": "09383208320832",
+      "address": "4/44-1",
+      "address1": "west strreet",
+      "address2": "keelakalangal",
+      "landMark": "Tenkasi",
+      "city": "tirunelveli",
+      "state": "Tamilnaddu",
+      "id": 2
+    },
+    {
+      "firstName": "Ravi",
+      "lastName": "Selvam",
+      "dob": "1994-03-09T18:30:00.000Z",
+      "email": "ravi@123.com",
+      "mobileNumber": "8989382392",
+      "idProof": "passport",
+      "idNumber": "32794272347",
+      "address": "4/44-1",
+      "address1": "west strreet",
+      "address2": "Kamarajar Nagar",
+      "landMark": "Tenkasi",
+      "city": "Tirunelveli",
+      "state": "Tamil Nadu",
+      "id": 3
+    }
+  ]
 }
