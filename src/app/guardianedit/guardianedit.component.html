@@ -4,57 +4,57 @@
     </div>
     <div class="col-3">
       <label for="exampleInputEmail1" class="form-label">FirstName</label>
-      <input type="email" class="form-control" [(ngModel)]="record.firstName">
+      <input type="email" class="form-control" name="firstName" [(ngModel)]="record.firstName">
     </div>
     <div class="col-3">
         <label for="exampleInputEmail1" class="form-label">LastName</label>
-        <input type="email" class="form-control" [(ngModel)]="record.lastName">
+        <input type="email" class="form-control" name="lastName" [(ngModel)]="record.lastName">
       </div>
       <div class="col-3">
         <label for="exampleInputEmail1" class="form-label">DOB</label>
-        <input type="email" class="form-control" [(ngModel)]="record.dob">
+        <input type="email" class="form-control" name="dob" [(ngModel)]="record.dob">
       </div>
       <div class="col-3">
         <label for="exampleInputEmail1" class="form-label">Email</label>
-        <input type="email" class="form-control" [(ngModel)]="record.email"  >
+        <input type="email" class="form-control" name="email" [(ngModel)]="record.email"  >
       </div>
       <div class="col-3">
         <label for="exampleInputEmail1" class="form-label">MobileNumber</label>
-        <input type="email" class="form-control" [(ngModel)]="record.mobileNumber"  >
+        <input type="email" class="form-control" name="mobileNumber" [(ngModel)]="record.mobileNumber"  >
       </div>
       <div class="col-3">
         <label for="exampleInputEmail1" class="form-label">ID Proof</label>
-        <input type="email" class="form-control" [(ngModel)]="record.idProof"  >
+        <input type="email" class="form-control" name="idProof" [(ngModel)]="record.idProof"  >
       </div>
       <div class="col-3">
         <label for="exampleInputEmail1" class="form-label">ID Number</label>
-        <input type="email" class="form-control" [(ngModel)]="record.idNumber">
+        <input type="email" class="form-control" name="idNumber" [(ngModel)]="record.idNumber">
       </div>
       <div class="col-3">
         <label for="exampleInputEmail1" class="form-label">Address 1</label>
-        <input type="email" class="form-control" [(ngModel)]="record.address">
+        <input type="email" class="form-control" name="address" [(ngModel)]="record.address">
       </div>
       <div class="col-3">
         <label for="exampleInputEmail1" class="form-label">Address 2</label>
-        <input type="email" class="form-control" [(ngModel)]="record.address2">
+        <input type="email" class="form-control" name="address2" [(ngModel)]="record.address2">
       </div>
       <div class="col-3">
         <label for="exampleInputEmail1" class="form-label">Address 3</label>
-        <input type="email" class="form-control" [(ngModel)]="record.address3">
+        <input type="email" class="form-control" name="address3" [(ngModel)]="record.address3">
       </div>
       <div class="col-3">
         <label for="exampleInputEmail1" class="form-label">LandMark</label>
-        <input type="email" class="form-control" [(ngModel)]="record.landMark">
+        <input type="email" class="form-control" name="landMark" [(ngModel)]="record.landMark">
       </div>
       <div class="col-3">
         <label for="exampleInputEmail1" class="form-label">City</label>
-        <input type="email" class="form-control" [(ngModel)]="record.city">
+        <input type="email" class="form-control" name="city" [(ngModel)]="record.city">
       </div>
       <div class="col-3">
         <label for="exampleInputEmail1" class="form-label">State</label>
-        <input type="email" class="form-control" [(ngModel)]="record.state">
+        <input type="email" class="form-control" name="state" [(ngModel)]="record.state">
       </div>
       <div class="float-end">
-    <button type="button"  class="btn btn-primary">Submit</button>
+    <button type="button"  class="btn btn-primary" (click)="updateGuardian()">Submit</button>
 </div>
   </form>

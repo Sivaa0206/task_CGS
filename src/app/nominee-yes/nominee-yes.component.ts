@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { gte } from '../gte.validators';
@@ -10,6 +10,9 @@ import { gte } from '../gte.validators';
   styleUrls: ['./nominee-yes.component.css']
 })
 export class NomineeYesComponent  {
+
+  @Output() buttonClicks = new EventEmitter<void>();
+
 
   
 
@@ -41,6 +44,10 @@ export class NomineeYesComponent  {
   }
   get dob(){
     return this.registerForm.get('dob');
+  }
+
+  onButtonClick() {
+    this.buttonClicks.emit();
   }
 
 

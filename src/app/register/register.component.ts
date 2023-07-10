@@ -1,8 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 import { gte } from '../gte.validators';
 @Component({
   selector: 'app-register',
@@ -10,6 +9,8 @@ import { gte } from '../gte.validators';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
+  @Output() buttonClick = new EventEmitter<void>();
+
   selectedDate!: Date;
   birthDate: any;
 // firstName: any;
@@ -27,9 +28,12 @@ export class RegisterComponent {
 // state: any;
 datas: any;
 
+
   
 
   constructor( private formBuilder:FormBuilder ,private http:HttpClient, private router:Router){}
+
+
 
   registerForm = this.formBuilder.group({
     firstName : ["",Validators.required],
@@ -53,6 +57,7 @@ datas: any;
 
   saveDatas(){
     console.log(this.registerForm.value);
+    this.onButtonClick();
     
       this.http.post("http://localhost:3000/datas", this.registerForm.value).subscribe(response =>
       {
@@ -60,13 +65,21 @@ datas: any;
         console.log(this.datas);
         
         console.log("data saved Successfully");
-        this.router.navigate(['/yes']);
+        // this.router.navigate(['/yes']);
+        this.registerForm.reset();
         
       },error => {
         console.error("error saving data", error);
         
       });
     } 
+
+
+  onButtonClick() {
+    this.buttonClick.emit();
+  }
+
+ 
     }
   
   

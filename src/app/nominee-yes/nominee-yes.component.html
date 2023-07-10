@@ -25,7 +25,7 @@
                 <mat-datepicker #dobPicker></mat-datepicker>
               <mat-error>
                 <small *ngIf="dob?.errors?.['gte']">
-                  Age must not be less than 18
+                  Age is less than 18 please fill Guardian Form.
                 </small>
               </mat-error>
             </mat-form-field>
@@ -104,7 +104,7 @@
           <p>
 
             <button class="btn btn-primary "  [disabled]="!registerForm.valid" (click)="regDatas()" routerLink="/nomineeData">Submit</button>
-            <button class="btn btn-danger float-end"  [disabled]="dob?.valid" routerLink="/guardian">Next</button>
+            <button class="btn btn-danger float-end"  [disabled]="dob?.valid" (click)="onButtonClick()">Next</button>
 
           </p>
         </div>

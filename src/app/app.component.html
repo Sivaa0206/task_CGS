@@ -1,3 +1,29 @@
 <!-- <app-register></app-register>
 <app-nominee-yes></app-nominee-yes> -->
-<router-outlet></router-outlet>
+
+<mat-tab-group mat-stretch-tabs="false" mat-align-tabs="end">
+    <mat-tab label="register">
+      <ng-template matTabContent>
+        <app-register (buttonClick)="onFirstComponentButtonClick()"></app-register>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="nominee"  [disabled]="isNominee">
+      <ng-template matTabContent >
+        <app-nominee-yes (buttonClicks)="onGuardianClick()"></app-nominee-yes>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="guardian" [disabled]="isGuardian">
+        <ng-template matTabContent>
+            <app-guardian ></app-guardian>
+        </ng-template>
+      </mat-tab>
+      <mat-tab label="Datas">
+        <ng-template matTabContent>
+            <button class="btn btn-primary" routerLink="/guardianData">Guardian data</button>
+            <button class="btn btn-primary" routerLink="/nomineeData">Nominee data</button>
+            <router-outlet></router-outlet>
+        </ng-template>
+      </mat-tab>
+  </mat-tab-group>
+  
+   

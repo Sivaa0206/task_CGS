@@ -20,7 +20,6 @@ const routes: Routes = [
   {path:"edit/:id",component:EditRegisterComponent},
   {path:"editGuardian/:id", component:GuardianeditComponent},
   {path:"editNominee/:id", component:NomineeEditComponent},
-  {path:"",redirectTo:"table",pathMatch:'full'}
 ];
 
 @NgModule({

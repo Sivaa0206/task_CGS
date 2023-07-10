@@ -29,6 +29,7 @@ import { GuardianeditComponent } from './guardianedit/guardianedit.component';
 import { NomineeEditComponent } from './nominee-edit/nominee-edit.component';
 import { AdminComponent } from './admin/admin.component';
 // import { DatasModule } from './datas/datas.module';
+import {MatTabsModule} from '@angular/material/tabs';
 
 
 
@@ -58,7 +59,7 @@ import { AdminComponent } from './admin/admin.component';
     AppRoutingModule,
     BrowserAnimationsModule,MatFormFieldModule,MatIconModule,MatInputModule,MatDatepickerModule,MatNativeDateModule,
     MatRadioModule,MatSelectModule,MatCardModule,MatButtonModule,ReactiveFormsModule,HttpClientModule,MatTableModule,
-    MatDividerModule,FormsModule,FormsModule
+    MatDividerModule,FormsModule,FormsModule,MatTabsModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
@@ -66,4 +67,7 @@ import { AdminComponent } from './admin/admin.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+  
+}
