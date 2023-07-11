@@ -1,8 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { gte } from '../gte.validators';
+import { RecordService } from '../record.service';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-nominee-yes',
@@ -12,11 +14,18 @@ import { gte } from '../gte.validators';
 export class NomineeYesComponent  {
 
   @Output() buttonClicks = new EventEmitter<void>();
+  @Output() formData = new EventEmitter<any>();
+  formValue: any;
 
 
+
+// registerForm:FormGroup;
   
 
-  constructor(private http:HttpClient, private router:Router, private formBuilder:FormBuilder){}
+  constructor(private http:HttpClient, private router:Router,
+     private formBuilder:FormBuilder, private service:RecordService,private shared:SharedService){}
+
+     
   
   registerForm = this.formBuilder.group({
     firstName : ["",Validators.required],
@@ -34,14 +43,36 @@ export class NomineeYesComponent  {
     state : ["",Validators.required],
     nominee : [Validators.required]
   })
-  
+  // emitFormData() {
+  //   if (this.registerForm.valid) {
+  //     this.formData.emit(this.registerForm.value);
+  //   }        
+  // }
+
+  // regDatas(){
+  //   if(this.registerForm.valid){}
+
+  // }
+  ngOnInit() {
+    this.formValue = this.shared.formValue;
+  }
 
   
   regDatas(){
+    this.registerPost();
     this.http.post("http://localhost:3000/posts",this.registerForm.value).subscribe()
     console.log(this.registerForm.value);
     this.registerForm.reset();
   }
+
+  registerPost(){
+    this.http.post("http://localhost:3000/datas", this.formValue).subscribe();
+  }
+  // saveDatas(){
+
+  //   this.service.saveTwoDatas();
+
+  // }
   get dob(){
     return this.registerForm.get('dob');
   }

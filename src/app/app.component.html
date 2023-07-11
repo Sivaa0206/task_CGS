@@ -1,26 +1,28 @@
 <!-- <app-register></app-register>
 <app-nominee-yes></app-nominee-yes> -->
 
-<mat-tab-group mat-stretch-tabs="false" mat-align-tabs="end">
-    <mat-tab label="register">
-      <ng-template matTabContent>
-        <app-register (buttonClick)="onFirstComponentButtonClick()"></app-register>
-      </ng-template>
-    </mat-tab>
-    <mat-tab label="nominee"  [disabled]="isNominee">
+
+<mat-tab-group mat-stretch-tabs="false" preserveContent mat-align-tabs="end">
+    <mat-tab label="Register Form">
       <ng-template matTabContent >
-        <app-nominee-yes (buttonClicks)="onGuardianClick()"></app-nominee-yes>
+        <app-register (buttonClick)="onNomineeClick()"></app-register>
       </ng-template>
     </mat-tab>
-    <mat-tab label="guardian" [disabled]="isGuardian">
-        <ng-template matTabContent>
-            <app-guardian ></app-guardian>
+    <mat-tab label="Nominee Registration"  [disabled]="isNominee">
+      <ng-template matTabContent  >
+        <app-nominee-yes  (buttonClicks)="onGuardianClick()"></app-nominee-yes>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="Guardian Registration" [disabled]="isGuardian">
+        <ng-template matTabContent >
+            <app-guardian></app-guardian>
         </ng-template>
       </mat-tab>
       <mat-tab label="Datas">
         <ng-template matTabContent>
-            <button class="btn btn-primary" routerLink="/guardianData">Guardian data</button>
-            <button class="btn btn-primary" routerLink="/nomineeData">Nominee data</button>
+            <button class="btn btn-outline-primary" routerLink="/guardianData">Guardian data</button>
+            <button class="btn btn-outline-primary " routerLink="/nomineeData">Nominee data</button>
+            <button class="btn btn-outline-primary " routerLink="/table">Registered data</button>
             <router-outlet></router-outlet>
         </ng-template>
       </mat-tab>

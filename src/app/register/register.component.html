@@ -105,8 +105,8 @@
           </p>
           <p>
             <mat-label>Nominee</mat-label>
-            <mat-radio-group aria-label="Select an option" (change)="saveDatas()" formControlName="nominee" >
-              <mat-radio-button value="yes">Yes</mat-radio-button>
+            <mat-radio-group aria-label="Select an option" formControlName="nominee" >
+              <mat-radio-button (change)="submitForm()"   value="yes">Yes</mat-radio-button>
               <mat-radio-button value="no">No</mat-radio-button>
             </mat-radio-group>
           </p>

@@ -1,8 +1,10 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { gte } from '../gte.validators';
+import { RecordService } from '../record.service';
+import { SharedService } from '../shared.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -10,6 +12,8 @@ import { gte } from '../gte.validators';
 })
 export class RegisterComponent {
   @Output() buttonClick = new EventEmitter<void>();
+  @Output() formData = new EventEmitter<any>();
+
 
   selectedDate!: Date;
   birthDate: any;
@@ -29,9 +33,11 @@ export class RegisterComponent {
 datas: any;
 
 
-  
+// registerForm:FormGroup;
 
-  constructor( private formBuilder:FormBuilder ,private http:HttpClient, private router:Router){}
+  constructor( private formBuilder:FormBuilder ,private http:HttpClient, private router:Router, private recordService:RecordService,private shared:SharedService){}
+
+    
 
 
 
@@ -51,13 +57,19 @@ datas: any;
     state : ["",Validators.required],
     nominee : [Validators.required]
   })
+  // onSubmit() {
+    
+  //     this.recordService.updateForm1Data(this.registerForm.value);
+    
+  // }
   get dob1(){
     return this.registerForm.get('dob');
   }
 
   saveDatas(){
     console.log(this.registerForm.value);
-    this.onButtonClick();
+    this.submitForm()
+    // this.resetForm();
     
       this.http.post("http://localhost:3000/datas", this.registerForm.value).subscribe(response =>
       {
@@ -66,7 +78,7 @@ datas: any;
         
         console.log("data saved Successfully");
         // this.router.navigate(['/yes']);
-        this.registerForm.reset();
+        // this.registerForm.reset();
         
       },error => {
         console.error("error saving data", error);
@@ -78,9 +90,22 @@ datas: any;
   onButtonClick() {
     this.buttonClick.emit();
   }
+  // resetForm() {
+  //   this.registerForm.reset();
+  // }
+
+  submitForm() {
+    this.onButtonClick();
+
+    // Get the form value
+    const formValue = this.registerForm.value;
+
+    // Set the form value in the shared service
+    this.shared.formValue = formValue;
+  }
 
  
-    }
+  }
   
   
   // registerFormDatas(){

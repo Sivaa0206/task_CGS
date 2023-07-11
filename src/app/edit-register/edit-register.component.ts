@@ -27,7 +27,7 @@ constructor(private http:HttpClient, private recordService:RecordService,
    this.id = this.acivatedRoute.snapshot.paramMap.get('id');
    console.log(this.id);
    
- this.recordService.getEdit(this.id).subscribe((result:any) =>{
+ this.recordService.editRegister(this.id).subscribe((result:any) =>{
     this.data = result;
    
   console.log(this.data);
@@ -60,7 +60,6 @@ constructor(private http:HttpClient, private recordService:RecordService,
 editDatas(){
   this.recordService.updateDatas(this.id,this.record);
   this.router.navigate(['/table']);
-  
 }
 
 
